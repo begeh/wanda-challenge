@@ -15,7 +15,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/">
+        <Route exact path="/">
           <Main />
         </Route>
       </Switch>

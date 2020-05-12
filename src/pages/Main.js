@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 
 import { Table, Button } from 'react-bootstrap';
 
@@ -6,29 +6,59 @@ import experts from "../experts.json";
 
 import TableItem from "../components/TableItem";
 
+import axios from 'axios';
+
 export default function Main(props){
-  const [name, setName] = useState(null);
-  const [url, setUrl] = useState(null); 
+  const [name, setName] = useState("");
+  const [url, setUrl] = useState(""); 
   const [list, setList] = useState(experts);
   const [show, setShow] = useState(false);
-
-  const handleSubmit = (event) => {
+  
+  const handleSubmit = async (event) => {
     event.preventDefault();
     if(!name || !url){
       return;
     }
 
-    const newUser ={
-      "id": list.length,
-      "name": name,
-      "longUrl": url,
-      "shortUrl": null,
-      "friends": [],
-      "headings": []
+    const urlCheck = url.split(":");
+    let longUrl = url;
+    console.log(longUrl)
+    console.log(urlCheck)
+    if(urlCheck[0] !== "https" && urlCheck[0] !== "http"){
+      longUrl = `https://${url}`;
     }
-    setList([...list, newUser]);
-    setName("");
-    setUrl("");
+
+    const request = require("request");
+    const linkRequest = {
+    destination: longUrl,
+    }
+
+    const requestHeaders = {
+      "Content-Type": "application/json",
+      "apikey": "e12bafdd5ff24baaba855383fb988dbd",
+    }
+
+    await request({
+        uri: "https://api.rebrandly.com/v1/links",
+        method: "POST",
+        body: JSON.stringify(linkRequest),
+        headers: requestHeaders
+    }, (err, response, body) => {
+      const link = JSON.parse(body);
+      console.log(`Long URL was ${link.destination}, short URL is ${link.shortUrl}`);
+
+      const newUser ={
+        "id": list.length,
+        "name": name,
+        "longUrl": longUrl,
+        "shortUrl": link.shortUrl,
+        "friends": [],
+        "headings": []
+      }
+      setList([...list, newUser]);
+      setName("");
+      setUrl("");
+    })
 
   }
   
@@ -38,6 +68,7 @@ export default function Main(props){
         <p>
           Find an expert
         </p>
+        <h1>{process.env.bitly_URL}</h1>
         <input id="search" className="input" type="textarea" />
         <Button onClick={e => {
           if(show){
