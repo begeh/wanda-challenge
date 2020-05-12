@@ -20,15 +20,20 @@
   margin: 10px;
 }
 
-.search{
+.input{
   padding: 0.2em;
   height: 50px;
   width: 500px;
   font-size: 30px;
 }
 
-.new-user-button{
+.new-user-button, .register{
   margin: 30px;
+}
+
+.add-user{
+  display:flex;
+  flex-direction: column;
 }
 
 .table{
