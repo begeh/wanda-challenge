@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, Fragment} from 'react';
 
 import { Table, Button } from 'react-bootstrap';
 
@@ -9,10 +9,16 @@ import TableItem from "../components/TableItem";
 import axios from 'axios';
 
 export default function Main(props){
+
+  let expertsList = experts;
+  if(props.list){
+    expertsList = experts;
+  }
   const [name, setName] = useState("");
   const [url, setUrl] = useState(""); 
-  const [list, setList] = useState(experts);
+  const [list, setList] = useState(expertsList);
   const [show, setShow] = useState(false);
+
   
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -22,8 +28,7 @@ export default function Main(props){
 
     const urlCheck = url.split(":");
     let longUrl = url;
-    console.log(longUrl)
-    console.log(urlCheck)
+
     if(urlCheck[0] !== "https" && urlCheck[0] !== "http"){
       longUrl = `https://${url}`;
     }
@@ -63,7 +68,7 @@ export default function Main(props){
   }
   
   return(
-    <div className="App">
+    <>
       <h1>Expert Search</h1>
         <p>
           Find an expert
@@ -77,7 +82,7 @@ export default function Main(props){
             setShow(true);
           }
         }} className= "new-user-button" variant="secondary" size="lg">
-          Register New User
+          {show ? "Close" : "Register New User"}
         </Button>
 
         {
@@ -114,6 +119,6 @@ export default function Main(props){
               }
           </tbody>
         </Table>
-    </div>
+    </>
   )
 }

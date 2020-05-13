@@ -25,6 +25,7 @@
   height: 50px;
   width: 500px;
   font-size: 30px;
+  margin: 10px;
 }
 
 .new-user-button, .register{

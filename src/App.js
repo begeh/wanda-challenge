@@ -10,15 +10,21 @@ import {
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Main from "./pages/Main";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/">
-          <Main />
-        </Route>
-      </Switch>
+      <div className="App">
+        <Switch>
+          <Route exact path="/" 
+          component={(props)=><Main {...props}/>}
+          />
+          <Route path='/profile' 
+          component={(props)=><Profile {...props}/>}
+          />
+        </Switch>
+      </div>
     </Router>
   );
 }
