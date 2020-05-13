@@ -2,7 +2,7 @@ import React, {useState, Fragment} from 'react';
 
 import { Table, Button } from 'react-bootstrap';
 
-import db from "../db/db.json";
+import db from "../db.json";
 
 import TableItem from "../components/TableItem";
 

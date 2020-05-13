@@ -8,7 +8,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.use(cors());
 app.use(bodyParser.json());
 
-const {db} = require("./db/db");
+const {db} = require("./db");
 
 const rp = require('request-promise');
 const cheerio = require('cheerio');
