@@ -6,8 +6,6 @@ import db from "../db.json";
 
 import TableItem from "../components/TableItem";
 
-import axios from 'axios';
-
 const request = require("request");
 
 export default function Main(props){
@@ -25,10 +23,6 @@ export default function Main(props){
 
   
   const handleSubmit = async (event) => {
-
-    // await axios.post("http://localhost:8080/header",{name: name, url: url}).then(res => console.log(res));
-
-    // // console.log(api);
 
     event.preventDefault();
 
