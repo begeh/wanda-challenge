@@ -2,7 +2,7 @@ const rp = require('request-promise');
 const cheerio = require('cheerio');
 const url = 'https://en.m.wikipedia.org/wiki/List_of_presidents_of_the_United_States';
 
-export default async function scraper(url){
+async function scraper(url){
 return await rp(url)
   .then(function(html){
     const $ = cheerio.load(html);
@@ -17,3 +17,5 @@ return await rp(url)
     return err
   });
 }
+
+scraper(url).then(res=>console.log(res));
