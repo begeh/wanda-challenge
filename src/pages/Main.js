@@ -57,7 +57,7 @@ export default function Main(props){
         method: "POST",
         body: JSON.stringify(linkRequest),
         headers: requestHeaders
-    }, (err, response, body) => {
+    }, async (err, response, body) => {
       const link = JSON.parse(body);
       console.log(`Long URL was ${link.destination}, short URL is ${link.shortUrl}`);
 
@@ -69,6 +69,23 @@ export default function Main(props){
         "friends": [],
         "headings": []
       }
+
+     await request({
+        uri: "http://localhost:8080/data",
+        method: "POST",
+        body: JSON.stringify(newUser),
+        headers: {
+          "Content-Type": "application/json",
+          'Access-Control-Allow-Origin': 'http://localhost:8080',
+          "Access-Control-Allow-Methods": "POST",
+          }
+    }, async (err, response, body) => {
+      if(err){
+        console.log("Success")
+      } else{
+        console.log("Failure");
+      }
+    })
 
       setList([...list, newUser]);
       setName("");

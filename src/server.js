@@ -2,7 +2,11 @@ const express = require('express');
 const bodyParser = require('body-parser')
 const path = require('path');
 const app = express();
+const cors = require('cors');
+
 app.use(express.static(path.join(__dirname, 'build')));
+app.use(cors());
+app.use(bodyParser.json());
 
 const {db} = require("./db/db");
 
@@ -35,16 +39,22 @@ app.get('/', (req, res) => {
 });
 
 app.get('/header', async (req, res) => {
-  // res.sendFile(path.join(__dirname, 'build', 'index.html'));
   const longURL = 'https://en.m.wikipedia.org/wiki/List_of_presidents_of_the_United_States';
   scraper(longURL).then(response => res.send(response))
-  // const arr = [1,2,3,4,5,6,7]
 });
 
 app.get("/data", async (req, res)=>{
   res.json(db.getState());
-  // const list = db.getState();
-  // res.json(list);
+})
+
+app.post("/data", async (req,res)=>{
+  const longUrl = req.body.longUrl;
+  console.log(longUrl);
+  const tags = await scraper(longUrl).then(response => response)
+  console.log(tags);
+  const user = {...req.body, header: tags};
+  console.log(user);
+  db.set(Object.keys(db.getState()).length, user).write();
 })
 
 app.listen(process.env.PORT || 8080,  () => {
