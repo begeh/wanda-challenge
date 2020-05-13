@@ -6,7 +6,7 @@ import experts from "../experts.json";
 
 import TableItem from "../components/TableItem";
 
-import axios from 'axios';
+import scraper from "../scraper";
 
 export default function Main(props){
 
@@ -21,6 +21,8 @@ export default function Main(props){
 
   
   const handleSubmit = async (event) => {
+
+    console.log(scraper(url));
     event.preventDefault();
     if(!name || !url){
       return;
