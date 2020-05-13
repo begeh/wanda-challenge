@@ -18,4 +18,4 @@ return await rp(url)
   });
 }
 
-scraper(url).then(res=>console.log(res));
+module.exports = scraper;

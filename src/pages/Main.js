@@ -2,11 +2,17 @@ import React, {useState, Fragment} from 'react';
 
 import { Table, Button } from 'react-bootstrap';
 
-import experts from "../experts.json";
+import db from "../db/db.json";
 
 import TableItem from "../components/TableItem";
 
+import axios from 'axios';
+
+const request = require("request");
+
 export default function Main(props){
+
+  const experts = Object.values(db);
 
   let expertsList = experts;
   if(props.list){
@@ -19,6 +25,10 @@ export default function Main(props){
 
   
   const handleSubmit = async (event) => {
+
+    // await axios.post("http://localhost:8080/header",{name: name, url: url}).then(res => console.log(res));
+
+    // // console.log(api);
 
     event.preventDefault();
 
@@ -33,7 +43,6 @@ export default function Main(props){
       longUrl = `https://${url}`;
     }
 
-    const request = require("request");
     const linkRequest = {
     destination: longUrl,
     }
@@ -60,6 +69,7 @@ export default function Main(props){
         "friends": [],
         "headings": []
       }
+
       setList([...list, newUser]);
       setName("");
       setUrl("");
@@ -73,7 +83,6 @@ export default function Main(props){
         <p>
           Find an expert
         </p>
-        <h1>{process.env.bitly_URL}</h1>
         <input id="search" className="input" type="textarea" />
         <Button onClick={e => {
           if(show){
@@ -87,11 +96,11 @@ export default function Main(props){
 
         {
           show ?  
-          <form className="add-user" onSubmit={(event)=> handleSubmit(event)}>
-          <input placeholder="Enter Name" className="input" type="textarea" value={name} onChange={e => setName(e.target.value)} />
-          <input placeholder="Enter Website URL" className="input" type="textarea" onChange={e => setUrl(e.target.value)} value={url}/>
-          <input type="submit" className= "btn btn-primary register" value="Submit" />
-        </form>
+          <form method="GET" action="/header" className="add-user" onSubmit={(event)=> handleSubmit(event)}>
+            <input placeholder="Enter Name" className="input" type="textarea" value={name} onChange={e => setName(e.target.value)} />
+            <input placeholder="Enter Website URL" className="input" type="textarea" onChange={e => setUrl(e.target.value)} value={url}/>
+            <input type="submit" className= "btn btn-primary register" value="Submit" />
+          </form>
         : null
         }
         
