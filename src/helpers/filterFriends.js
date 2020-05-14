@@ -5,7 +5,6 @@ const filterFriends = (friends, list) => {
       arr.push(list[friendId - 1]);
     }
   }
-  console.log(arr);
   return arr;
 }
 

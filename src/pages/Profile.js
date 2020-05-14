@@ -5,9 +5,16 @@ import {useHistory, Link} from "react-router-dom";
 
 import {Card, Button} from "react-bootstrap";
 
+import filterFriends from '../helpers/filterFriends';
+
 export default function Profile(props) {
   let history = useHistory();
-  const {name, longUrl, shortUrl, headings, friendList} = props.location.state;
+  const {name, longUrl, shortUrl, headings, friends, list, friendList} = props.location.state;
+
+  const friendRedirect = (e, friend) =>{
+    e.preventDefault();
+    history.push({pathname: "/profile", state: {...friend, list: list, friendList: filterFriends(friend.friends, list)}})
+  }
 
   return(
     <Card className="profile text-center">
@@ -41,7 +48,7 @@ export default function Profile(props) {
             <ul className="profile-list">
             {
               friendList.map((friend, index) =>(
-                <Link to="/">
+                <Link onClick={(e)=> friendRedirect(e, friend)}>
                   <li key={index}>{friend.name}</li>
                 </Link>
               ))
