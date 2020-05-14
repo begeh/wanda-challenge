@@ -28,12 +28,12 @@ export default function Main(props){
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    setShow(false);
-    setLoad(true);
-
     if(!name || !url){
       return;
     }
+
+    setShow(false);
+    setLoad(true);
 
     const urlCheck = url.split(":");
     let longUrl = url;
@@ -57,11 +57,14 @@ export default function Main(props){
         body: JSON.stringify(linkRequest),
         headers: requestHeaders
     }, async (err, response, body) => {
+      if(err){
+        return;
+      }
       const link = JSON.parse(body);
       console.log(`Long URL was ${link.destination}, short URL is ${link.shortUrl}`);
 
       const newUser ={
-        "id": list.length,
+        "id": list.length + 1,
         "name": name,
         "longUrl": longUrl,
         "shortUrl": link.shortUrl,
@@ -80,7 +83,7 @@ export default function Main(props){
           }
     }, async (err, response, body) => {
         if(err){
-          console.log("Success")
+          return;
         } else{
           setLoad(false);
           setList([...list, newUser]);
@@ -131,8 +134,6 @@ export default function Main(props){
               <th>Name</th>
               <th>Short URL</th>
               <th>No. of Friends</th>
-              {/* <th>
-              </th> */}
             </tr>
           </thead>
           <tbody>
@@ -140,6 +141,7 @@ export default function Main(props){
                 list.map((expert, index) => (
                   <TableItem 
                     key={index}
+                    id={expert.id}
                     name={expert.name}
                     shortUrl={expert.shortUrl}
                     friends={expert.friends}

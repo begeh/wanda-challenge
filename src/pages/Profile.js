@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import "../App.css";
 
-import {useHistory, Link} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 
 import {Card, Button} from "react-bootstrap";
 
@@ -9,7 +9,27 @@ import filterFriends from '../helpers/filterFriends';
 
 export default function Profile(props) {
   let history = useHistory();
-  const {name, longUrl, shortUrl, headings, friends, list, friendList} = props.location.state;
+  const {id, name, longUrl, shortUrl, headings, friends, list, friendList} = props.location.state;
+
+  const[friend, setFriend] = useState("");
+  const [searchFriends, setSearchFriends] = useState([]);
+
+  const notFriends = list.filter(user => !friends.includes(user.id)&& user.id !== id);
+
+  useEffect(()=>{
+    const search = []
+    for(let user of notFriends){
+      if(user.name.toLowerCase().includes(friend.toLowerCase())){
+        search.push(user);
+      }
+    }
+    console.log(list);
+    console.log(notFriends);
+    // console.log(list);
+    // console.log(search);
+    setSearchFriends(search);
+
+  },[friend])
 
   const friendRedirect = (e, friend) =>{
     e.preventDefault();
@@ -48,9 +68,9 @@ export default function Profile(props) {
             <ul className="profile-list">
             {
               friendList.map((friend, index) =>(
-                <Link onClick={(e)=> friendRedirect(e, friend)}>
-                  <li key={index}>{friend.name}</li>
-                </Link>
+                <a key={index}  href="/profile" onClick={(e)=> friendRedirect(e, friend)}>
+                  <li>{friend.name}</li>
+                </a>
               ))
             }
             </ul>
@@ -60,8 +80,37 @@ export default function Profile(props) {
         <Button onClick={() => history.push("/")}variant="primary">Home</Button>
       </Card.Body>
       <Card.Footer className="text-muted">
-        <p>Search for Expert</p>
-      <input id="search" className="input" type="textarea" />
+        <p>Search for Friend</p>
+        <input 
+          className="input" 
+          type="textarea" 
+          placeholder="Search by Name"
+          value={friend}
+          onChange={e => setFriend(e.target.value)}
+        />
+        <div>
+          {
+            friend ?
+            searchFriends.map((user, index) => (
+              <div className = "search">
+                <p>{user.name}</p>
+                <Button variant="primary">Add Friend</Button>
+              </div>
+            ))
+            : null
+          } 
+        </div>
+      </Card.Footer>
+      <Card.Footer className="text-muted">
+        <p>Search for Expert on Top</p>
+        <input
+          className="input"
+          type="textarea" 
+          placeholder="Search by Topic"
+        />
+        <div>
+
+        </div>
       </Card.Footer>
     </Card>
   )

@@ -24,7 +24,8 @@
   padding: 0.2em;
   height: 50px;
   width: 500px;
-  font-size: 30px;
+  font-size: 20px;
+  border-color: grey;
   margin: 10px;
 }
 
@@ -53,6 +54,15 @@
 
 .profile-list{
   list-style-type: none;
+}
+
+.search{
+  display: flex;
+  justify-content: center;
+}
+
+.search p{
+  margin-right: 30px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
