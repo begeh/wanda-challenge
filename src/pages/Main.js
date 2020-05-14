@@ -2,6 +2,8 @@ import React, {useState, Fragment} from 'react';
 
 import { Table, Button } from 'react-bootstrap';
 
+import status from "../status.png";
+
 import db from "../db.json";
 
 import TableItem from "../components/TableItem";
@@ -20,11 +22,14 @@ export default function Main(props){
   const [url, setUrl] = useState(""); 
   const [list, setList] = useState(expertsList);
   const [show, setShow] = useState(false);
+  const [load, setLoad] = useState(false);
 
   
   const handleSubmit = async (event) => {
-    console.log(list);
     event.preventDefault();
+
+    setShow(false);
+    setLoad(true);
 
     if(!name || !url){
       return;
@@ -77,6 +82,7 @@ export default function Main(props){
         if(err){
           console.log("Success")
         } else{
+          setLoad(false);
           setList([...list, newUser]);
           setName("");
           setUrl("");
@@ -100,6 +106,14 @@ export default function Main(props){
         }} className= "new-user-button" variant="secondary" size="lg">
           {show ? "Close" : "Register New User"}
         </Button>
+        {load ?
+          <img
+            className="load-image"
+            src={status}
+            alt="Loading"
+          />
+          : null
+        }
 
         {
           show ?  

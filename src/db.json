@@ -28,19 +28,31 @@
   {
     "id": 2,
     "name": "Bashir",
-    "longUrl": "https://hotmail.com",
-    "shortUrl": "rebrand.ly/icpbsmz",
+    "longUrl": "https://www.google.com",
+    "shortUrl": "rebrand.ly/uhrx9gr",
     "friends": [],
-    "headings": []
+    "headings": [
+      "Account Options"
+    ]
   },
   {
     "id": 3,
-    "name": "Bashie",
+    "name": "Bashir",
     "longUrl": "https://www.example.edu",
-    "shortUrl": "rebrand.ly/vpvj3cu",
+    "shortUrl": "rebrand.ly/87uakwm",
     "friends": [],
     "headings": [
       "Example Domain"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "New",
+    "longUrl": "https://www.google.com",
+    "shortUrl": "rebrand.ly/9ao3p5l",
+    "friends": [],
+    "headings": [
+      "Account Options"
     ]
   }
 ]
