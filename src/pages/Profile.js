@@ -3,9 +3,11 @@ import "../App.css";
 
 import {useHistory} from "react-router-dom";
 
-import {Card, Button} from "react-bootstrap";
+import {Card, Button, ListGroup} from "react-bootstrap";
 
 import filterFriends from '../helpers/filterFriends';
+
+import FriendSearchItem from '../components/FriendSearchItem';
 
 export default function Profile(props) {
   let history = useHistory();
@@ -91,12 +93,13 @@ export default function Profile(props) {
         <div>
           {
             friend ?
-            searchFriends.map((user, index) => (
-              <div className = "search">
-                <p>{user.name}</p>
-                <Button variant="primary">Add Friend</Button>
-              </div>
-            ))
+            <ListGroup className="search">
+              {
+                searchFriends.map((user, index) => (
+                  <FriendSearchItem name={user.name} />
+                ))
+              }
+            </ListGroup>
             : null
           } 
         </div>

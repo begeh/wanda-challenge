@@ -57,12 +57,7 @@
 }
 
 .search{
-  display: flex;
-  justify-content: center;
-}
-
-.search p{
-  margin-right: 30px;
+  align-items: center !important;
 }
 
 @media (prefers-reduced-motion: no-preference) {

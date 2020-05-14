@@ -48,7 +48,10 @@ app.get("/data", async (req, res)=>{
 
 app.post("/data", async (req,res)=>{
   const longUrl = req.body.longUrl;
-  const tags = await scraper(longUrl).then(response => response)
+  let tags = await scraper(longUrl).then(response => response)
+  if(tags.statusCode){
+    tags = ["Error: Web Scraping Not Allowed"] 
+  }
   const user = {...req.body, headings: tags};
   db.set(Object.keys(db.getState()).length + 1, user).write();
 })
