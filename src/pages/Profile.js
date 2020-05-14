@@ -1,15 +1,13 @@
 import React from 'react';
 import "../App.css";
 
-import {useHistory} from "react-router-dom";
+import {useHistory, Link} from "react-router-dom";
 
 import {Card, Button} from "react-bootstrap";
 
 export default function Profile(props) {
   let history = useHistory();
-  const {name, longUrl, shortUrl, friends, headings} = props.location.state;
-
-  console.log(headings);
+  const {name, longUrl, shortUrl, headings, friendList} = props.location.state;
 
   return(
     <Card className="profile text-center">
@@ -25,16 +23,32 @@ export default function Profile(props) {
           <u>Headings</u>:
           {
             headings ? 
-            <ul className="headings-list">
+            <ul className="profile-list">
             {
               headings.map((heading, index) =>(
-                <li>{heading}</li>
+                <li key={index}>{heading}</li>
               ))
             }
             </ul>
             : null
           }
           
+        </Card.Title>
+        <Card.Title>
+          <u>Friends</u>:
+          {
+            friendList ?
+            <ul className="profile-list">
+            {
+              friendList.map((friend, index) =>(
+                <Link to="/">
+                  <li key={index}>{friend.name}</li>
+                </Link>
+              ))
+            }
+            </ul>
+            : null
+          }
         </Card.Title>
         <Button onClick={() => history.push("/")}variant="primary">Home</Button>
       </Card.Body>

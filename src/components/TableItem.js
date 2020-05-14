@@ -4,11 +4,20 @@ import {Button} from "react-bootstrap";
 
 import {useHistory} from "react-router-dom";
 
+import filterFriends from '../helpers/filterFriends';
+
 export default function TableItem(props){
   let history = useHistory();
-  const {name, longUrl, shortUrl, friends} = props;
+  const {name, longUrl, shortUrl, friends, list} = props;
+
+  const handleClick = (e) =>{
+    e.preventDefault();
+    const friendList = filterFriends(friends, list);
+    history.push({pathname: "/profile", state: {...props, friendList: friendList}})
+  }
+
   return(
-    <tr onClick={()=>history.push({pathname: "/profile", state: props})}>
+    <tr onClick={(e)=> handleClick(e)}>
       <td>{name}</td>
       <td>
         <a onClick={(e)=> e.stopPropagation()} href={longUrl}>

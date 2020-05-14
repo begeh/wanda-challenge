@@ -4,7 +4,7 @@
     "name": "Jane Doe",
     "longUrl": "http://www.google.com/",
     "shortUrl": "rebrand.ly/ywqpxh7",
-    "friends": [0,1,5],
+    "friends": [2,3],
     "headings": []
   },
   "2" : {
@@ -12,7 +12,7 @@
     "name": "James Doe",
     "longUrl": "http://www.example.edu/",
     "shortUrl": "rebrand.ly/zviiuiz",
-    "friends": [0,1,5,6,9],
+    "friends": [1,4,5],
     "headings": []
   }
 }
