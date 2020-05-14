@@ -8,4 +8,11 @@ const experts = require("./experts.json")
 db.defaults(experts)
   .write()
 
+function reset() {
+    db.setState(experts)
+      .write()
+  }
+
+reset();
+
 module.exports = {db};

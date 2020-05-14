@@ -1,6 +1,6 @@
 const rp = require('request-promise');
 const cheerio = require('cheerio');
-const url = 'https://en.m.wikipedia.org/wiki/List_of_presidents_of_the_United_States';
+// const url = 'https://en.m.wikipedia.org/wiki/List_of_presidents_of_the_United_States';
 
 async function scraper(url){
 return await rp(url)

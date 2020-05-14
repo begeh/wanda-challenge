@@ -34,7 +34,6 @@ app.get('/ping', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  // res.sendFile(path.join(__dirname, 'build', 'index.html'));
   return res.send('Wanda Challenge API');
 });
 
@@ -52,7 +51,7 @@ app.post("/data", async (req,res)=>{
   console.log(longUrl);
   const tags = await scraper(longUrl).then(response => response)
   console.log(tags);
-  const user = {...req.body, header: tags};
+  const user = {...req.body, headings: tags};
   console.log(user);
   db.set(Object.keys(db.getState()).length, user).write();
 })

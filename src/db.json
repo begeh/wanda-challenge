@@ -1,9 +1,9 @@
-{
-  "0": {
+[
+  {
     "id": 1,
     "name": "Jane Doe",
     "longUrl": "http://www.example.edu/",
-    "shortUrl": "bit1.ly",
+    "shortUrl": "rebrand.ly/ywqpxh7",
     "friends": [
       0,
       1,
@@ -11,11 +11,11 @@
     ],
     "headings": []
   },
-  "1": {
+  {
     "id": 2,
     "name": "James Doe",
     "longUrl": "http://www.example.edu/",
-    "shortUrl": "bit1.ly",
+    "shortUrl": "rebrand.ly/zviiuiz",
     "friends": [
       0,
       1,
@@ -24,5 +24,23 @@
       9
     ],
     "headings": []
+  },
+  {
+    "id": 2,
+    "name": "Bashir",
+    "longUrl": "https://hotmail.com",
+    "shortUrl": "rebrand.ly/icpbsmz",
+    "friends": [],
+    "headings": []
+  },
+  {
+    "id": 3,
+    "name": "Bashie",
+    "longUrl": "https://www.example.edu",
+    "shortUrl": "rebrand.ly/vpvj3cu",
+    "friends": [],
+    "headings": [
+      "Example Domain"
+    ]
   }
-}
+]

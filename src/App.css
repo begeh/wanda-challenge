@@ -15,7 +15,7 @@
   color: white;
 }
 
-.App p{
+.subhead{
   color: #61dafb;
   margin: 10px;
 }
@@ -40,6 +40,10 @@
 .table{
   margin-top: 50px;
   width: 80vw !important;
+}
+
+.profile{
+  color: black !important;
 }
 
 @media (prefers-reduced-motion: no-preference) {

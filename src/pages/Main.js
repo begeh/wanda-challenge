@@ -23,7 +23,7 @@ export default function Main(props){
 
   
   const handleSubmit = async (event) => {
-
+    console.log(list);
     event.preventDefault();
 
     if(!name || !url){
@@ -74,27 +74,23 @@ export default function Main(props){
           "Access-Control-Allow-Methods": "POST",
           }
     }, async (err, response, body) => {
-      if(err){
-        console.log("Success")
-      } else{
-        console.log("Failure");
-      }
+        if(err){
+          console.log("Success")
+        } else{
+          setList([...list, newUser]);
+          setName("");
+          setUrl("");
+        }
+      })
     })
-
-      setList([...list, newUser]);
-      setName("");
-      setUrl("");
-    })
-
   }
   
   return(
     <>
       <h1>Expert Search</h1>
-        <p>
+        <p className="subhead">
           Find an expert
         </p>
-        <input id="search" className="input" type="textarea" />
         <Button onClick={e => {
           if(show){
             setShow(false)
@@ -133,6 +129,7 @@ export default function Main(props){
                     name={expert.name}
                     shortUrl={expert.shortUrl}
                     friends={expert.friends}
+                    headings={expert.headings}
                     longUrl={expert.longUrl}
                   />
                 ))

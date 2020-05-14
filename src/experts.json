@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Jane Doe",
     "longUrl": "http://www.example.edu/",
-    "shortUrl": "bit1.ly",
+    "shortUrl": "rebrand.ly/ywqpxh7",
     "friends": [0,1,5],
     "headings": []
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "name": "James Doe",
     "longUrl": "http://www.example.edu/",
-    "shortUrl": "bit1.ly",
+    "shortUrl": "rebrand.ly/zviiuiz",
     "friends": [0,1,5,6,9],
     "headings": []
   }
