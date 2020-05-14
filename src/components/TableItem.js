@@ -6,18 +6,19 @@ import {useHistory} from "react-router-dom";
 
 export default function TableItem(props){
   let history = useHistory();
+  const {name, longUrl, shortUrl, friends} = props;
   return(
     <tr onClick={()=>history.push({pathname: "/profile", state: props})}>
-      <td>{props.name}</td>
+      <td>{name}</td>
       <td>
-        <a href={props.longUrl}>
-          {props.shortUrl}
+        <a onClick={(e)=> e.stopPropagation()} href={longUrl}>
+          {shortUrl}
         </a>
       </td>
-      <td>{props.friends.length}</td>
-      <td>
+      <td>{friends.length}</td>
+      {/* <td>
         <Button variant="primary">Add Friend</Button>
-      </td>
+      </td> */}
     </tr>
   )
 }

@@ -53,7 +53,7 @@ app.post("/data", async (req,res)=>{
   console.log(tags);
   const user = {...req.body, headings: tags};
   console.log(user);
-  db.set(Object.keys(db.getState()).length, user).write();
+  db.set(Object.keys(db.getState()).length + 1, user).write();
 })
 
 app.listen(process.env.PORT || 8080,  () => {

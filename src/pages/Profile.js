@@ -39,7 +39,7 @@ export default function Profile(props) {
         <Button onClick={() => history.push("/")}variant="primary">Home</Button>
       </Card.Body>
       <Card.Footer className="text-muted">
-        <p>Search Friends</p>
+        <p>Search for Expert</p>
       <input id="search" className="input" type="textarea" />
       </Card.Footer>
     </Card>

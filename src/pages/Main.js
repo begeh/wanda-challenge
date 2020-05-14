@@ -131,8 +131,8 @@ export default function Main(props){
               <th>Name</th>
               <th>Short URL</th>
               <th>No. of Friends</th>
-              <th>
-              </th>
+              {/* <th>
+              </th> */}
             </tr>
           </thead>
           <tbody>
@@ -145,6 +145,7 @@ export default function Main(props){
                     friends={expert.friends}
                     headings={expert.headings}
                     longUrl={expert.longUrl}
+                    list={list}
                   />
                 ))
               }

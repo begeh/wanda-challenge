@@ -6,7 +6,7 @@ async function scraper(url){
 return await rp(url)
   .then(function(html){
     const $ = cheerio.load(html);
-    const headers = $("h1, h2, h3, h4, h5, h6");
+    const headers = $("h1, h2, h3");
     const arr = [];
     headers.each(function(){
       arr.push($(this).text());
