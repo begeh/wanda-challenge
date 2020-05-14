@@ -22,10 +22,10 @@ export default function Profile(props) {
           Shortened URL: {shortUrl}
         </Card.Title>
         <Card.Title>
-          Headings:
+          <u>Headings</u>:
           {
             headings ? 
-            <ul>
+            <ul className="headings-list">
             {
               headings.map((heading, index) =>(
                 <li>{heading}</li>

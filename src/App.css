@@ -51,6 +51,10 @@
   color: black !important;
 }
 
+.headings-list{
+  list-style-type: none;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

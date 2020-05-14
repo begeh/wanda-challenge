@@ -28,31 +28,48 @@
   {
     "id": 2,
     "name": "Bashir",
-    "longUrl": "https://www.google.com",
-    "shortUrl": "rebrand.ly/uhrx9gr",
+    "longUrl": "https://www.wikipedia.org",
+    "shortUrl": "rebrand.ly/xojuqwz",
     "friends": [],
     "headings": [
-      "Account Options"
+      "\n\n\n\nWikipedia\n\nThe Free Encyclopedia\n\n",
+      "\n\n\n\n1 000 000+\n\n\narticles\n\n\n\n",
+      "\n\n\n\n100 000+\n\n\narticles\n\n\n\n",
+      "\n\n\n\n10 000+\n\n\narticles\n\n\n\n",
+      "\n\n\n\n1 000+\n\n\narticles\n\n\n\n",
+      "\n\n\n\n100+\n\n\narticles\n\n\n\n"
     ]
   },
   {
     "id": 3,
-    "name": "Bashir",
-    "longUrl": "https://www.example.edu",
-    "shortUrl": "rebrand.ly/87uakwm",
+    "name": "Game",
+    "longUrl": "https://www.education.edu",
+    "shortUrl": "rebrand.ly/ft0kkv6",
     "friends": [],
     "headings": [
-      "Example Domain"
+      "RHEC CLOSURE NOTICE",
+      "The best educational programs in the region, right at your doorstep.",
+      "Featured Programs",
+      "\n\t\t\t\t\tGED Preparation and Basic Academic Skills\n\t\t\t",
+      "\n\t\t\t\t\tEntry to Practice Nurse Anesthesia\n\t\t\t",
+      "\n\t\t\t\t\tEducational Leadership\n\t\t\t",
+      "Announcements & Events",
+      "Virtual Open House – June 4th",
+      "Winter 2020 Issue of CenterPoint",
+      "Claude Moore Education Complex Featured by AIA Virginia",
+      "Want to Host an Event?",
+      "Roanoke Higher Education Center",
+      "Hours of Operation"
     ]
   },
   {
     "id": 4,
-    "name": "New",
-    "longUrl": "https://www.google.com",
-    "shortUrl": "rebrand.ly/9ao3p5l",
+    "name": "Hello",
+    "longUrl": "https://www.example.edu",
+    "shortUrl": "rebrand.ly/gnblb2b",
     "friends": [],
     "headings": [
-      "Account Options"
+      "Example Domain"
     ]
   }
 ]
