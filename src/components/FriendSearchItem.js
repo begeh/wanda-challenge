@@ -10,7 +10,7 @@ const request = require("request");
 export default function FriendSearchItem(props){
   let history = useHistory();
   const {friend, user, list} = props;
-  console.log(user);
+  
 
   const handleClick = async (e) =>{
     e.preventDefault();

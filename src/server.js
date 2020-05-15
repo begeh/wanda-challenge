@@ -49,8 +49,10 @@ app.get("/data", async (req, res)=>{
 app.post("/data", async (req,res)=>{
   const longUrl = req.body.longUrl;
   let tags = await scraper(longUrl).then(response => response)
-  if(tags.statusCode){
-    tags = ["Error: Web Scraping Not Allowed"] 
+  if(tags.statusCode && tags.statusCode === 403){
+    tags = ["Error: 403 Forbidden Access"] 
+  } else if(tags.message){
+    tags = ["Error: Could not reach site"] 
   }
   const user = {...req.body, headings: tags};
   db.set(Object.keys(db.getState()).length + 1, user).write();
@@ -58,7 +60,6 @@ app.post("/data", async (req,res)=>{
 
 app.post("/addfriend", async (req,res)=>{
   const {user, friend} = req.body;
-  console.log(req.body);
   db.set(user.id, user).write();
   db.set(friend.id, friend).write();
 })

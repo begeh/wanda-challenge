@@ -79,7 +79,7 @@ export default function Profile(props) {
         <Button onClick={() => history.push("/")}variant="primary">Home</Button>
       </Card.Body>
       <Card.Footer className="text-muted">
-        <p>Search for Friend</p>
+        <p>Add a Friend</p>
         <input 
           className="input" 
           type="textarea" 
@@ -107,7 +107,7 @@ export default function Profile(props) {
         </div>
       </Card.Footer>
       <Card.Footer className="text-muted">
-        <p>Search for Expert on Top</p>
+        <p>Search for Expert</p>
         <input
           className="input"
           type="textarea" 

@@ -6,8 +6,7 @@
     "shortUrl": "rebrand.ly/ywqpxh7",
     "friends": [
       2,
-      3,
-      4
+      3
     ],
     "headings": []
   },
@@ -17,36 +16,28 @@
     "longUrl": "http://www.example.edu/",
     "shortUrl": "rebrand.ly/zviiuiz",
     "friends": [
-      1,
-      3,
-      4
+      1
     ],
     "headings": []
   },
   "3": {
     "id": 3,
     "name": "Jesse James",
-    "longUrl": "http://www.google.com/",
-    "shortUrl": "rebrand.ly/ywqpxh7",
+    "longUrl": "http://www.nintendo.com/",
+    "shortUrl": "rebrand.ly/20vvczk",
     "friends": [
-      1,
-      2,
-      4
+      1
     ],
     "headings": []
   },
   "4": {
     "id": 4,
-    "name": "Bashir",
-    "longUrl": "https://www.nintendo.com",
-    "shortUrl": "rebrand.ly/k5oqiqc",
-    "friends": [
-      1,
-      2,
-      3
-    ],
+    "name": "Compass",
+    "longUrl": "https://web.compass.lighthouselabs.ca/welcome",
+    "shortUrl": "rebrand.ly/zuj4nfm",
+    "friends": [],
     "headings": [
-      "New video game releases"
+      "Welcome to Compass"
     ]
   }
 }
