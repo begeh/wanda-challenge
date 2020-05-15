@@ -11,7 +11,8 @@ import FriendSearchItem from '../components/FriendSearchItem';
 
 export default function Profile(props) {
   let history = useHistory();
-  const {id, name, longUrl, shortUrl, headings, friends, list, friendList} = props.location.state;
+  const {id, name, longUrl, shortUrl, headings, friends} = props.location.state.user;
+  const  {list, friendList} = props.location.state;
 
   const[friend, setFriend] = useState("");
   const [searchFriends, setSearchFriends] = useState([]);
@@ -25,17 +26,13 @@ export default function Profile(props) {
         search.push(user);
       }
     }
-    console.log(list);
-    console.log(notFriends);
-    // console.log(list);
-    // console.log(search);
     setSearchFriends(search);
 
   },[friend])
 
   const friendRedirect = (e, friend) =>{
     e.preventDefault();
-    history.push({pathname: "/profile", state: {...friend, list: list, friendList: filterFriends(friend.friends, list)}})
+    history.push({pathname: "/profile", state: {user: friend, list: list, friendList: filterFriends(friend.friends, list)}})
   }
 
   return(
@@ -95,8 +92,13 @@ export default function Profile(props) {
             friend ?
             <ListGroup className="search">
               {
-                searchFriends.map((user, index) => (
-                  <FriendSearchItem name={user.name} />
+                searchFriends.map((friend, index) => (
+                  <FriendSearchItem 
+                  key={index}
+                  friend={friend} 
+                  user={props.location.state.user}
+                  list={list}
+                  />
                 ))
               }
             </ListGroup>

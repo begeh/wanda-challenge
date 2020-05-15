@@ -6,7 +6,8 @@
     "shortUrl": "rebrand.ly/ywqpxh7",
     "friends": [
       2,
-      3
+      3,
+      4
     ],
     "headings": []
   },
@@ -17,19 +18,35 @@
     "shortUrl": "rebrand.ly/zviiuiz",
     "friends": [
       1,
-      4,
-      5
+      3,
+      4
     ],
     "headings": []
   },
   "3": {
     "id": 3,
-    "name": "https://www.ign.com/ca",
-    "longUrl": "https://www.ign.com/ca",
-    "shortUrl": "rebrand.ly/lb560e6",
-    "friends": [],
+    "name": "Jesse James",
+    "longUrl": "http://www.google.com/",
+    "shortUrl": "rebrand.ly/ywqpxh7",
+    "friends": [
+      1,
+      2,
+      4
+    ],
+    "headings": []
+  },
+  "4": {
+    "id": 4,
+    "name": "Bashir",
+    "longUrl": "https://www.nintendo.com",
+    "shortUrl": "rebrand.ly/k5oqiqc",
+    "friends": [
+      1,
+      2,
+      3
+    ],
     "headings": [
-      "Error: Web Scraping Not Allowed"
+      "New video game releases"
     ]
   }
 }

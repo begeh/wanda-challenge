@@ -141,12 +141,13 @@ export default function Main(props){
                 list.map((expert, index) => (
                   <TableItem 
                     key={index}
-                    id={expert.id}
-                    name={expert.name}
-                    shortUrl={expert.shortUrl}
-                    friends={expert.friends}
-                    headings={expert.headings}
-                    longUrl={expert.longUrl}
+                    user={expert}
+                    // id={expert.id}
+                    // name={expert.name}
+                    // shortUrl={expert.shortUrl}
+                    // friends={expert.friends}
+                    // headings={expert.headings}
+                    // longUrl={expert.longUrl}
                     list={list}
                   />
                 ))

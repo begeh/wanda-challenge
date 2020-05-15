@@ -1,19 +1,18 @@
 import React from 'react';
 
-import {Button} from "react-bootstrap";
-
 import {useHistory} from "react-router-dom";
 
 import filterFriends from '../helpers/filterFriends';
 
 export default function TableItem(props){
   let history = useHistory();
-  const {name, longUrl, shortUrl, friends, list} = props;
+  const {name, longUrl, shortUrl, friends} = props.user;
+  const{list} = props;
 
   const handleClick = (e) =>{
     e.preventDefault();
     const friendList = filterFriends(friends, list);
-    history.push({pathname: "/profile", state: {...props, friendList: friendList}})
+    history.push({pathname: "/profile", state: {user: props.user, list: list, friendList: friendList}})
   }
 
   return(
@@ -25,9 +24,6 @@ export default function TableItem(props){
         </a>
       </td>
       <td>{friends.length}</td>
-      {/* <td>
-        <Button variant="primary">Add Friend</Button>
-      </td> */}
     </tr>
   )
 }

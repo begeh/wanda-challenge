@@ -12,7 +12,15 @@
     "name": "James Doe",
     "longUrl": "http://www.example.edu/",
     "shortUrl": "rebrand.ly/zviiuiz",
-    "friends": [1,4,5],
+    "friends": [1],
+    "headings": []
+  },
+  "3" : {
+    "id": 3,
+    "name": "Jesse James",
+    "longUrl": "http://www.google.com/",
+    "shortUrl": "rebrand.ly/ywqpxh7",
+    "friends": [1],
     "headings": []
   }
 }
