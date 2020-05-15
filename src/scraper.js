@@ -1,11 +1,23 @@
 const rp = require('request-promise');
 const cheerio = require('cheerio');
-// const url = 'https://en.m.wikipedia.org/wiki/List_of_presidents_of_the_United_States';
 
 async function scraper(url){
-return await rp(url)
-  .then(function(html){
-    const $ = cheerio.load(html);
+
+const { getUserAgent } = require("universal-user-agent");
+  
+const userAgent = getUserAgent();
+
+const options = {
+  uri: url,
+  transform: function (body) {
+    return cheerio.load(body);
+  },
+  headers: {
+    'User-Agent': userAgent
+}
+};
+return await rp(options)
+  .then(function($){
     const headers = $("h1, h2, h3");
     const arr = [];
     headers.each(function(){
@@ -18,4 +30,4 @@ return await rp(url)
   });
 }
 
-module.exports = scraper;
+module.exports = {scraper};

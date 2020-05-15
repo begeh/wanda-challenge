@@ -10,24 +10,7 @@ app.use(bodyParser.json());
 
 const {db} = require("./db");
 
-const rp = require('request-promise');
-const cheerio = require('cheerio');
-
-async function scraper(url){
-  return await rp(url)
-    .then(function(html){
-      const $ = cheerio.load(html);
-      const headers = $("h1, h2, h3, h4, h5, h6");
-      const arr = [];
-      headers.each(function(){
-        arr.push($(this).text());
-      });
-      return arr.filter(item => item && item.length !== " ");
-    })
-    .catch(function(err){
-      return err
-    });
-  }
+const {scraper} = require('./scraper');
 
 app.get('/ping', (req, res) => {
  return res.send('pong');

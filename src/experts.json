@@ -5,7 +5,7 @@
     "longUrl": "http://www.google.com/",
     "shortUrl": "rebrand.ly/ywqpxh7",
     "friends": [2,3],
-    "headings": []
+    "headings": [ "Account Options" ]
   },
   "2" : {
     "id": 2,
@@ -13,7 +13,7 @@
     "longUrl": "http://www.example.edu/",
     "shortUrl": "rebrand.ly/zviiuiz",
     "friends": [1],
-    "headings": []
+    "headings": [ "Example Domain" ]
   },
   "3" : {
     "id": 3,
@@ -21,6 +21,6 @@
     "longUrl": "https://web.compass.lighthouselabs.ca/welcome",
     "shortUrl": "rebrand.ly/20vvczk",
     "friends": [1],
-    "headings": []
+    "headings": [ "Welcome to Compass" ]
   }
 }

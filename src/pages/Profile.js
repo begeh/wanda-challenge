@@ -72,7 +72,7 @@ export default function Profile(props) {
         <Card.Title>
           <u>Headings</u>:
           {
-            headings.length > 0 ? 
+            headings ? 
             <ul className="profile-list">
             {
               headings.map((heading, index) =>(
@@ -80,7 +80,7 @@ export default function Profile(props) {
               ))
             }
             </ul>
-            : <p>No Headings</p>
+            : null
           }
           
         </Card.Title>
@@ -145,8 +145,10 @@ export default function Profile(props) {
             <ListGroup className="search">
               {
                 searchTopic.map((user, index) => (
-                  <ListGroupItem key={index} href="/profile" onClick={(e)=> friendRedirect(e, user)}>
-                    {user.name}
+                  <ListGroupItem key={index} onClick={(e)=> friendRedirect(e, user)}>
+                    <a href="/profile">
+                      {user.name}
+                    </a>
                   </ListGroupItem>
                 ))
               }

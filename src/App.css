@@ -50,6 +50,7 @@
 
 .profile{
   color: black !important;
+  max-width: 80vw;
 }
 
 .profile-list{
