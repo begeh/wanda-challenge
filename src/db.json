@@ -35,24 +35,5 @@
     "headings": [
       "Welcome to Compass"
     ]
-  },
-  "4": {
-    "id": 4,
-    "name": "saf",
-    "longUrl": "http://afa",
-    "friends": [],
-    "headings": [
-      "Error: Invalid URL"
-    ]
-  },
-  "5": {
-    "id": 5,
-    "name": "Bashir",
-    "longUrl": "http://www.example.edu",
-    "shortUrl": "rebrand.ly/jko4t6x",
-    "friends": [],
-    "headings": [
-      "Example Domain"
-    ]
   }
 }
