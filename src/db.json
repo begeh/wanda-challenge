@@ -38,23 +38,21 @@
   },
   "4": {
     "id": 4,
-    "name": "www.wikipedia.org",
-    "longUrl": "http://www.wikipedia.org",
-    "shortUrl": "rebrand.ly/fbtg3o9",
+    "name": "saf",
+    "longUrl": "http://afa",
     "friends": [],
     "headings": [
-      "Wikipedia\nThe Free Encyclopedia\n"
+      "Error: Invalid URL"
     ]
   },
   "5": {
     "id": 5,
-    "name": "ninent",
-    "longUrl": "http://www.nintendo.com",
-    "shortUrl": "rebrand.ly/pyx2vyq",
+    "name": "Bashir",
+    "longUrl": "http://www.example.edu",
+    "shortUrl": "rebrand.ly/jko4t6x",
     "friends": [],
     "headings": [
-      "Explore gaming systems",
-      "New video game releases"
+      "Example Domain"
     ]
   }
 }

@@ -23,7 +23,7 @@ export default function Profile(props) {
   const notFriends = list.filter(user => !friends.includes(user.id)&& user.id !== id);
 
   useEffect(()=>{
-    const search = []
+    const search = [];
     for(let user of notFriends){
       if(user.name.toLowerCase().includes(friend.toLowerCase())){
         search.push(user);
@@ -69,7 +69,7 @@ export default function Profile(props) {
         <Card.Title>
           <u>Headings</u>:
           {
-            headings ? 
+            headings[0] !== "Error: Invalid URL" ? 
             <ul className="profile-list">
             {
               headings.map((heading, index) =>(
@@ -77,7 +77,7 @@ export default function Profile(props) {
               ))
             }
             </ul>
-            : null
+            : <p className="error">Error: Invalid URL Submitted</p>
           }
           
         </Card.Title>

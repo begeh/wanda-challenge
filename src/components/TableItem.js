@@ -19,9 +19,14 @@ export default function TableItem(props){
     <tr onClick={(e)=> handleClick(e)}>
       <td>{name}</td>
       <td>
-        <a onClick={(e)=> e.stopPropagation()} href={longUrl}>
-          {shortUrl}
-        </a>
+        {
+          shortUrl ?
+            <a onClick={(e)=> e.stopPropagation()} href={longUrl}>
+            {shortUrl}
+            </a> 
+        : <p className="error">Invalid URL</p>
+        }
+        
       </td>
       <td>{friends.length}</td>
     </tr>
