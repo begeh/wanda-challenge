@@ -3,7 +3,7 @@ import "../App.css";
 
 import {useHistory} from "react-router-dom";
 
-import {Card, Button, ListGroup} from "react-bootstrap";
+import {Card, Button, ListGroup, ListGroupItem} from "react-bootstrap";
 
 import filterFriends from '../helpers/filterFriends';
 
@@ -16,6 +16,9 @@ export default function Profile(props) {
 
   const[friend, setFriend] = useState("");
   const [searchFriends, setSearchFriends] = useState([]);
+
+  const[topic, setTopic] = useState("");
+  const [searchTopic, setSearchTopic] = useState([]);
 
   const notFriends = list.filter(user => !friends.includes(user.id)&& user.id !== id);
 
@@ -30,8 +33,29 @@ export default function Profile(props) {
 
   },[friend])
 
+  useEffect(()=>{
+    console.log(topic);
+    const search = []
+    for(let user of notFriends){
+      console.log(user);
+      const filteredByTopic = user.headings.filter(item => item.toLowerCase().includes(topic.toLowerCase()));
+      console.log(filteredByTopic.length);
+      if(filteredByTopic.length > 0){
+        search.push(user);
+      }
+      console.log(search);
+    }
+    
+    setSearchTopic(search);
+
+  },[topic])
+
   const friendRedirect = (e, friend) =>{
     e.preventDefault();
+    setSearchTopic([]);
+    setSearchFriends([]);
+    setTopic("");
+    setFriend("");
     history.push({pathname: "/profile", state: {user: friend, list: list, friendList: filterFriends(friend.friends, list)}})
   }
 
@@ -112,9 +136,23 @@ export default function Profile(props) {
           className="input"
           type="textarea" 
           placeholder="Search by Topic"
+          value={topic}
+          onChange={e => setTopic(e.target.value)}
         />
         <div>
-
+        {
+            topic ?
+            <ListGroup className="search">
+              {
+                searchTopic.map((user, index) => (
+                  <ListGroupItem key={index} href="/profile" onClick={(e)=> friendRedirect(e, user)}>
+                    {user.name}
+                  </ListGroupItem>
+                ))
+              }
+            </ListGroup>
+            : null
+          }
         </div>
       </Card.Footer>
     </Card>
