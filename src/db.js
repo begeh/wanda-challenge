@@ -13,6 +13,6 @@ function reset() {
       .write()
   }
 
-reset();
+// reset();
 
 module.exports = {db};

@@ -48,7 +48,8 @@ app.get("/data", async (req, res)=>{
 
 app.post("/data", async (req,res)=>{
   const longUrl = req.body.longUrl;
-  let tags = await scraper(longUrl).then(response => response)
+  let tags = await scraper(longUrl).then(response => response);
+  console.log(tags);
   if(tags.statusCode && tags.statusCode === 403){
     tags = ["Error: 403 Forbidden Access"] 
   } else if(tags.message){

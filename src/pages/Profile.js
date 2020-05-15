@@ -72,7 +72,7 @@ export default function Profile(props) {
         <Card.Title>
           <u>Headings</u>:
           {
-            headings ? 
+            headings.length > 0 ? 
             <ul className="profile-list">
             {
               headings.map((heading, index) =>(
@@ -80,7 +80,7 @@ export default function Profile(props) {
               ))
             }
             </ul>
-            : null
+            : <p>No Headings</p>
           }
           
         </Card.Title>
