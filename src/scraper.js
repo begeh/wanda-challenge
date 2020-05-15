@@ -8,7 +8,7 @@ async function scraper(url){
   
   return await nightmare
   .goto(url)
-  .evaluate(() => Array.from(document.querySelectorAll('h1, h2, h3, .h1, .h2')).map(item => item.innerText))
+  .evaluate(() => Array.from(document.querySelectorAll('h1, h2, h3')).map(item => item.innerText))
   .then(result => result.filter(item => item !== "" && item !== " "))
   .catch(error => {
     console.error('Search failed:', error)

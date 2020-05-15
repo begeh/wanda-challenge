@@ -30,8 +30,7 @@
     "longUrl": "https://web.compass.lighthouselabs.ca/welcome",
     "shortUrl": "rebrand.ly/20vvczk",
     "friends": [
-      1,
-      4
+      1
     ],
     "headings": [
       "Welcome to Compass"
@@ -39,74 +38,23 @@
   },
   "4": {
     "id": 4,
-    "name": "bashir",
-    "longUrl": "https://bashiregeh.netlify.app/",
-    "shortUrl": "rebrand.ly/5l5u0ks",
-    "friends": [
-      3
-    ],
+    "name": "www.wikipedia.org",
+    "longUrl": "http://www.wikipedia.org",
+    "shortUrl": "rebrand.ly/fbtg3o9",
+    "friends": [],
     "headings": [
-      "BASHIR EGEH",
-      "ABOUT",
-      "PROJECTS",
-      "CONTACT",
-      "ABOUT ME",
-      "PROJECTS",
-      "CONNECT",
-      "Email: b_egeh@hotmail.com",
-      "Facebook",
-      "LinkedIn",
-      "GitHub (begeh)"
+      "Wikipedia\nThe Free Encyclopedia\n"
     ]
   },
   "5": {
     "id": 5,
-    "name": "bashir",
-    "longUrl": "https://bashiregeh.netlify.app/",
-    "shortUrl": "rebrand.ly/86hdkgs",
-    "friends": [],
-    "headings": [
-      "BASHIR EGEH",
-      "ABOUT",
-      "PROJECTS",
-      "CONTACT",
-      "ABOUT ME",
-      "PROJECTS",
-      "CONNECT",
-      "Email: b_egeh@hotmail.com",
-      "Facebook",
-      "LinkedIn",
-      "GitHub (begeh)"
-    ]
-  },
-  "6": {
-    "id": 6,
-    "name": "www.nine",
+    "name": "ninent",
     "longUrl": "http://www.nintendo.com",
-    "shortUrl": "rebrand.ly/fw3twpa",
+    "shortUrl": "rebrand.ly/pyx2vyq",
     "friends": [],
     "headings": [
       "Explore gaming systems",
       "New video game releases"
-    ]
-  },
-  "7": {
-    "id": 7,
-    "name": "parth",
-    "longUrl": "http://www.parthjd.com",
-    "shortUrl": "rebrand.ly/9ilv3e6",
-    "friends": [],
-    "headings": []
-  },
-  "8": {
-    "id": 8,
-    "name": "patrth",
-    "longUrl": "http://www.parthjd.com/about",
-    "shortUrl": "rebrand.ly/cxkr83i",
-    "friends": [],
-    "headings": [
-      "ABOUT ME",
-      "PERSONAL INFORMATION"
     ]
   }
 }
