@@ -39,7 +39,7 @@ export default function Main(props){
     let longUrl = url;
 
     if(urlCheck[0] !== "https" && urlCheck[0] !== "http"){
-      longUrl = `https://${url}`;
+      longUrl = `http://${url}`;
     }
 
     const linkRequest = {
@@ -142,12 +142,6 @@ export default function Main(props){
                   <TableItem 
                     key={index}
                     user={expert}
-                    // id={expert.id}
-                    // name={expert.name}
-                    // shortUrl={expert.shortUrl}
-                    // friends={expert.friends}
-                    // headings={expert.headings}
-                    // longUrl={expert.longUrl}
                     list={list}
                   />
                 ))

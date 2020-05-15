@@ -4,7 +4,6 @@ const adapter = new FileSync('db.json')
 const db = low(adapter)
 const experts = require("./experts.json")
  
-// Set some defaults
 db.defaults(experts)
   .write()
 
@@ -13,6 +12,6 @@ function reset() {
       .write()
   }
 
-// reset();
+reset();
 
 module.exports = {db};

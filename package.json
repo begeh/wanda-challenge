@@ -13,6 +13,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "lowdb": "^1.0.0",
+    "nightmare": "^3.0.2",
     "puppeteer": "^3.0.4",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
@@ -20,8 +21,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "request": "^2.88.2",
-    "request-promise": "^4.2.5",
-    "universal-user-agent": "^5.0.0"
+    "request-promise": "^4.2.5"
   },
   "scripts": {
     "start": "react-scripts start",

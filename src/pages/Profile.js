@@ -37,13 +37,10 @@ export default function Profile(props) {
     console.log(topic);
     const search = []
     for(let user of notFriends){
-      console.log(user);
       const filteredByTopic = user.headings.filter(item => item.toLowerCase().includes(topic.toLowerCase()));
-      console.log(filteredByTopic.length);
       if(filteredByTopic.length > 0){
         search.push(user);
       }
-      console.log(search);
     }
     
     setSearchTopic(search);

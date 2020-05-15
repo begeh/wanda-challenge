@@ -6,10 +6,11 @@
     "shortUrl": "rebrand.ly/ywqpxh7",
     "friends": [
       2,
-      3,
-      4
+      3
     ],
-    "headings": []
+    "headings": [
+      "Account Options"
+    ]
   },
   "2": {
     "id": 2,
@@ -17,12 +18,11 @@
     "longUrl": "http://www.example.edu/",
     "shortUrl": "rebrand.ly/zviiuiz",
     "friends": [
-      1,
-      3,
-      4,
-      6
+      1
     ],
-    "headings": []
+    "headings": [
+      "Example Domain"
+    ]
   },
   "3": {
     "id": 3,
@@ -31,280 +31,82 @@
     "shortUrl": "rebrand.ly/20vvczk",
     "friends": [
       1,
-      2,
-      5
+      4
     ],
-    "headings": []
+    "headings": [
+      "Welcome to Compass"
+    ]
   },
   "4": {
     "id": 4,
-    "name": "Bashir",
-    "longUrl": "https://www.wikipedia.org",
-    "shortUrl": "rebrand.ly/nayocna",
-    "friends": [
-      1,
-      2
-    ],
-    "headings": [
-      "\n\n\n\nWikipedia\n\nThe Free Encyclopedia\n\n",
-      "\n\n\n\n1 000 000+\n\n\narticles\n\n\n\n",
-      "\n\n\n\n100 000+\n\n\narticles\n\n\n\n",
-      "\n\n\n\n10 000+\n\n\narticles\n\n\n\n",
-      "\n\n\n\n1 000+\n\n\narticles\n\n\n\n",
-      "\n\n\n\n100+\n\n\narticles\n\n\n\n"
-    ]
-  },
-  "5": {
-    "id": 5,
-    "name": "Ned",
-    "longUrl": "https://www.nintendo.com",
-    "shortUrl": "rebrand.ly/k9vqle1",
+    "name": "bashir",
+    "longUrl": "https://bashiregeh.netlify.app/",
+    "shortUrl": "rebrand.ly/5l5u0ks",
     "friends": [
       3
     ],
     "headings": [
-      "New video game releases"
+      "BASHIR EGEH",
+      "ABOUT",
+      "PROJECTS",
+      "CONTACT",
+      "ABOUT ME",
+      "PROJECTS",
+      "CONNECT",
+      "Email: b_egeh@hotmail.com",
+      "Facebook",
+      "LinkedIn",
+      "GitHub (begeh)"
+    ]
+  },
+  "5": {
+    "id": 5,
+    "name": "bashir",
+    "longUrl": "https://bashiregeh.netlify.app/",
+    "shortUrl": "rebrand.ly/86hdkgs",
+    "friends": [],
+    "headings": [
+      "BASHIR EGEH",
+      "ABOUT",
+      "PROJECTS",
+      "CONTACT",
+      "ABOUT ME",
+      "PROJECTS",
+      "CONNECT",
+      "Email: b_egeh@hotmail.com",
+      "Facebook",
+      "LinkedIn",
+      "GitHub (begeh)"
     ]
   },
   "6": {
     "id": 6,
-    "name": "Gulaid",
-    "longUrl": "https://www.facebook.com",
-    "shortUrl": "rebrand.ly/3hze87r",
-    "friends": [
-      2
-    ],
+    "name": "www.nine",
+    "longUrl": "http://www.nintendo.com",
+    "shortUrl": "rebrand.ly/fw3twpa",
+    "friends": [],
     "headings": [
-      "Update Your Browser"
+      "Explore gaming systems",
+      "New video game releases"
     ]
   },
   "7": {
     "id": 7,
-    "name": "Parth",
-    "longUrl": "http://www.parthjd.com/",
-    "shortUrl": "rebrand.ly/ejizpxd",
+    "name": "parth",
+    "longUrl": "http://www.parthjd.com",
+    "shortUrl": "rebrand.ly/9ilv3e6",
     "friends": [],
     "headings": []
   },
   "8": {
     "id": 8,
-    "name": "PArtyh avout",
+    "name": "patrth",
     "longUrl": "http://www.parthjd.com/about",
-    "shortUrl": "rebrand.ly/plbkb4y",
-    "friends": [],
-    "headings": []
-  },
-  "9": {
-    "id": 9,
-    "name": "Parth again",
-    "longUrl": "http://www.parthjd.com/about",
-    "shortUrl": "rebrand.ly/x6tmrxa",
-    "friends": [],
-    "headings": []
-  },
-  "10": {
-    "id": 10,
-    "name": "google.cpm",
-    "longUrl": "https://www.google.com/search?q=some+sites+not+scraping+cheerio&rlz=1C5CHFA_enCA872CA872&oq=some+sites+not+scraping+cheerio&aqs=chrome..69i57j33.6040j0j7&sourceid=chrome&ie=UTF-8",
-    "shortUrl": "rebrand.ly/s7tms94",
+    "shortUrl": "rebrand.ly/cxkr83i",
     "friends": [],
     "headings": [
-      "People also ask"
-    ]
-  },
-  "11": {
-    "id": 11,
-    "name": "Hypercare",
-    "longUrl": "https://www.hypercare.com/",
-    "shortUrl": "rebrand.ly/umvn8qb",
-    "friends": [],
-    "headings": [
-      "Spend less time returning calls, more time on your patients.",
-      "Trusted by clinical teams of various shapes, sizes, and workflow",
-      "Available on the App Store",
-      "Available on Google Play",
-      "Web Platform",
-      "The perfect tool for busy clinicians",
-      "Clinicians",
-      "Love using Hypercare",
-      "Dr. Patrick Darragh, MD",
-      "Rob Ewart",
-      "Dr. Craig Albrecht, MD",
-      "Lucy O’Brien",
-      "Eliane Antar Crespin, PT",
-      "Dr. Joshua Liu, MD",
-      "Chantal Cooledge",
-      "Why Do People Love Hypercare?",
-      "Simple to use",
-      "Compliant",
-      "Built for Clinical Needs",
-      "Transform your workplace.",
-      "Product",
-      "Resources",
-      "Company",
-      "Get Our App"
-    ]
-  },
-  "12": {
-    "id": 12,
-    "name": "random quote",
-    "longUrl": "https://codepen.io/BEgeh/pen/evOJyw",
-    "shortUrl": "rebrand.ly/d2d4ex0",
-    "friends": [],
-    "headings": [
-      "Error: Could not reach site"
-    ]
-  },
-  "13": {
-    "id": 13,
-    "name": "vasilir",
-    "longUrl": "https://vasiliyklimkin.tech/",
-    "shortUrl": "rebrand.ly/fm3h9wc",
-    "friends": [],
-    "headings": []
-  },
-  "14": {
-    "id": 14,
-    "name": "wiki",
-    "longUrl": "https://www.wikipedia.org",
-    "shortUrl": "rebrand.ly/ixnddc5",
-    "friends": [],
-    "headings": []
-  },
-  "15": {
-    "id": 15,
-    "name": "nin",
-    "longUrl": "https://www.nintendo.org",
-    "shortUrl": "rebrand.ly/xsyld8t",
-    "friends": [],
-    "headings": [
-      "Error: Could not reach site"
-    ]
-  },
-  "16": {
-    "id": 16,
-    "name": "nintend",
-    "longUrl": "https://www.nintendo.com",
-    "shortUrl": "rebrand.ly/l4m7yx6",
-    "friends": [],
-    "headings": []
-  },
-  "17": {
-    "id": 17,
-    "name": "wikipedia",
-    "longUrl": "https://www.wikipedia.org",
-    "shortUrl": "rebrand.ly/i9zmt44",
-    "friends": [],
-    "headings": []
-  },
-  "18": {
-    "id": 18,
-    "name": "nnnnn",
-    "longUrl": "https://www.nintendo.com",
-    "shortUrl": "rebrand.ly/p6nuogw",
-    "friends": [],
-    "headings": []
-  },
-  "19": {
-    "id": 19,
-    "name": "wiki",
-    "longUrl": "https://www.wikipedia.org",
-    "shortUrl": "rebrand.ly/fwwsu28",
-    "friends": [],
-    "headings": [
-      "\n\n\n\nWikipedia\n\nThe Free Encyclopedia\n\n",
-      "\n\n\n\n1 000 000+\n\n\narticles\n\n\n\n",
-      "\n\n\n\n100 000+\n\n\narticles\n\n\n\n",
-      "\n\n\n\n10 000+\n\n\narticles\n\n\n\n",
-      "\n\n\n\n1 000+\n\n\narticles\n\n\n\n",
-      "\n\n\n\n100+\n\n\narticles\n\n\n\n"
-    ]
-  },
-  "20": {
-    "id": 20,
-    "name": "cheerio",
-    "longUrl": "https://www.example.edu",
-    "shortUrl": "rebrand.ly/0hupwjt",
-    "friends": [],
-    "headings": [
-      "Example Domain"
-    ]
-  },
-  "21": {
-    "id": 21,
-    "name": "www.googl",
-    "longUrl": "https://www.google.com",
-    "shortUrl": "rebrand.ly/puyu65r",
-    "friends": [],
-    "headings": [
-      "Account Options"
-    ]
-  },
-  "22": {
-    "id": 22,
-    "name": "comp",
-    "longUrl": "https://web.compass.lighthouselabs.ca/welcome",
-    "shortUrl": "rebrand.ly/70ir7bi",
-    "friends": [],
-    "headings": [
-      "Welcome to Compass"
-    ]
-  },
-  "23": {
-    "id": 23,
-    "name": "amazon",
-    "longUrl": "https://www.amazon.ca/",
-    "shortUrl": "rebrand.ly/wqfnwwd",
-    "friends": [],
-    "headings": []
-  },
-  "24": {
-    "id": 24,
-    "name": "www.example.edu",
-    "longUrl": "https://www.example.edu",
-    "shortUrl": "rebrand.ly/jri86jf",
-    "friends": [],
-    "headings": [
-      "Example Domain"
-    ]
-  },
-  "25": {
-    "id": 25,
-    "name": "amazon",
-    "longUrl": "https://www.amazon.ca",
-    "shortUrl": "rebrand.ly/ox3j2ay",
-    "friends": [],
-    "headings": []
-  },
-  "26": {
-    "id": 26,
-    "name": "new",
-    "longUrl": "https://www.amazon.ca",
-    "shortUrl": "rebrand.ly/vwsfr9n",
-    "friends": [],
-    "headings": []
-  },
-  "27": {
-    "id": 27,
-    "name": "www.amazon",
-    "longUrl": "https://www.amazon.ca",
-    "shortUrl": "rebrand.ly/55umdoh",
-    "friends": [],
-    "headings": []
-  },
-  "28": {
-    "id": 28,
-    "name": "wiki",
-    "longUrl": "https://www.wikipedia.org",
-    "shortUrl": "rebrand.ly/6mnx1mi",
-    "friends": [],
-    "headings": [
-      "\n\n\n\nWikipedia\n\nThe Free Encyclopedia\n\n",
-      "\n\n\n\n1 000 000+\n\n\narticles\n\n\n\n",
-      "\n\n\n\n100 000+\n\n\narticles\n\n\n\n",
-      "\n\n\n\n10 000+\n\n\narticles\n\n\n\n",
-      "\n\n\n\n1 000+\n\n\narticles\n\n\n\n",
-      "\n\n\n\n100+\n\n\narticles\n\n\n\n"
+      "ABOUT ME",
+      "PERSONAL INFORMATION"
     ]
   }
 }
