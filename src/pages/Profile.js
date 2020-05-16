@@ -69,15 +69,19 @@ export default function Profile(props) {
         <Card.Title>
           <u>Headings</u>:
           {
-            headings[0] !== "Error: Invalid URL" ? 
+            headings.length !== 0 && headings[0] !== "Error: Invalid URL" ? 
             <ul className="profile-list">
             {
               headings.map((heading, index) =>(
                 <li key={index}>{heading}</li>
               ))
             }
-            </ul>
-            : <p className="error">Error: Invalid URL Submitted</p>
+            </ul> :
+             (
+              headings[0] !== "Error: Invalid URL" ?
+              <p className="error">No Headings Found</p>
+              : <p className="error">Error: Invalid URL Submitted</p>
+              )
           }
           
         </Card.Title>
