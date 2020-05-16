@@ -30,43 +30,10 @@
     "longUrl": "https://web.compass.lighthouselabs.ca/welcome",
     "shortUrl": "rebrand.ly/20vvczk",
     "friends": [
-      1,
-      5
+      1
     ],
     "headings": [
       "Welcome to Compass"
-    ]
-  },
-  "4": {
-    "id": 4,
-    "name": "MedEssist",
-    "longUrl": "https://medessist.ca/inventory/login",
-    "shortUrl": "rebrand.ly/5vhpymf",
-    "friends": [],
-    "headings": [
-      "MedEssist Inventory"
-    ]
-  },
-  "5": {
-    "id": 5,
-    "name": "MedEssist 2",
-    "longUrl": "https://medessist.ca/",
-    "shortUrl": "rebrand.ly/bwwhj8n",
-    "friends": [
-      3
-    ],
-    "headings": [
-      "\n              Schedule a demo with us\n            ",
-      "\n                    Sign Up\n                  ",
-      "\n                Sign Up\n              ",
-      "\n                    Sign In\n                  ",
-      "\n                Sign In\n              ",
-      "For Patients MedEssist makes every dose count",
-      "Reminders",
-      "Medical History",
-      "Refills",
-      "Order refills at over 120 pharmacies.",
-      "Scan any receipt"
     ]
   }
 }
