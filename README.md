@@ -13,3 +13,11 @@ You will also see any lint errors in the console.
 ## APIs Used
 
 - Rebrandly: https://developers.rebrandly.com/docs/create-a-new-link
+
+### Dependencies
+- Express
+- React Router
+- React Bootstrap
+- Body Parser
+- LowDB
+- Nightmare
