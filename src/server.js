@@ -17,12 +17,7 @@ app.get('/ping', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  return res.send('Wanda Challenge API');
-});
-
-app.get('/header', async (req, res) => {
-  const longURL = 'https://en.m.wikipedia.org/wiki/List_of_presidents_of_the_United_States';
-  scraper(longURL).then(response => res.send(response))
+  return res.send('Wanda Challenge Database');
 });
 
 app.get("/data", async (req, res)=>{
