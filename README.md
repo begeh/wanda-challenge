@@ -1,3 +1,7 @@
+# EXPERT SEARCH
+
+Look for experts on a topic by searching the headings on their personal websites. 
+
 ## Getting Started
 
 First, run "npm install" in the project directory to install dependencies.

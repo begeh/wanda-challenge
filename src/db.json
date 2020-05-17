@@ -26,7 +26,7 @@
   },
   "3": {
     "id": 3,
-    "name": "Jesse James",
+    "name": "Alan Smith",
     "longUrl": "https://web.compass.lighthouselabs.ca/welcome",
     "shortUrl": "rebrand.ly/20vvczk",
     "friends": [
@@ -34,52 +34,6 @@
     ],
     "headings": [
       "Welcome to Compass"
-    ]
-  },
-  "4": {
-    "id": 4,
-    "name": "www.google.",
-    "longUrl": "http://www.google.com",
-    "shortUrl": "rebrand.ly/fomx39y",
-    "friends": [],
-    "headings": []
-  },
-  "5": {
-    "id": 5,
-    "name": "example",
-    "longUrl": "http://www.example.edu",
-    "shortUrl": "rebrand.ly/ifzcj5e",
-    "friends": [],
-    "headings": [
-      "Example Domain"
-    ]
-  },
-  "6": {
-    "id": 6,
-    "name": "example",
-    "longUrl": "http://adafag",
-    "friends": [],
-    "headings": [
-      "Error: Invalid URL"
-    ]
-  },
-  "7": {
-    "id": 7,
-    "name": "www.faog",
-    "longUrl": "http://agaga",
-    "friends": [],
-    "headings": [
-      "Error: Invalid URL"
-    ]
-  },
-  "8": {
-    "id": 8,
-    "name": "url",
-    "longUrl": "http://www.wikipedia.org",
-    "shortUrl": "rebrand.ly/ym3ighk",
-    "friends": [],
-    "headings": [
-      "Wikipedia\nThe Free Encyclopedia\n"
     ]
   }
 }
