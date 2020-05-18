@@ -34,11 +34,17 @@ export default function Profile(props) {
   },[friend])
 
   useEffect(()=>{
-    console.log(topic);
     const search = []
+    const splitTopic = topic.toLowerCase().split(" ");
     for(let user of notFriends){
-      const filteredByTopic = user.headings.filter(item => item.toLowerCase().includes(topic.toLowerCase()));
-      if(filteredByTopic.length > 0){
+      const joinedHeadings = user.headings.join("").toLowerCase();
+      let check = 0;
+      for(let item of splitTopic){
+        if(joinedHeadings.includes(item)){
+          check++
+        }
+      }
+      if(check === splitTopic.length){
         search.push(user);
       }
     }
